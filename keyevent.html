@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event</title>
+</head>
+<body>
+    <!-- //keydown supports all key, keypress doesn't support all key -->
+    <!-- <input type="text" id="txt" onkeydown="display();">
+    <input type="text" id="txt" onkeypress="display();"> -->
+
+    <!-- using when we chat  -->
+    <input type="text" id="txt" maxlength="1" onkeyup="display();"> 
+    <p id="result"></p>
+
+    <script>
+        function display(){
+            let txt = document.getElementById('txt').value;
+            let upper = txt.toUpperCase();
+            if (upper == 'A' || upper == 'E' || upper == 'I' || upper == 'O' || upper == 'U') {
+                document.getElementById('result').innerText = txt + ' is vowel in English.';
+            }
+            else if(upper = ''){
+                document.getElementById('result').innerText = '';
+            }
+            else{               
+                document.getElementById('result').innerText =  txt + ' is not vowel in English.';
+            }
+        }
+    </script>
+</body>
+</html>
